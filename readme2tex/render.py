@@ -322,7 +322,7 @@ def render(
         xml = (ET.fromstring(svg))
         attributes = xml.attrib
 
-        needs_inversion = not (equation.count('tikzpicture') and equation.count('fill='))
+        needs_inversion = False
 
         scale = 1.65
         height = float(attributes['height'][:-2]) * scale
